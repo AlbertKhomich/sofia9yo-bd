@@ -47,6 +47,7 @@ Einmal alle Missionen auf dem vorgesehenen Tablet durchspielen und anschließend
 - Fortschritt wird nur im lokalen Browser-Speicher gespeichert; keine Synchronisierung zwischen Geräten. Bestehende Spielstände des alten Spiels auf derselben Domain werden übernommen.
 - Nach Neuladen startet eine laufende Zeitaufgabe erneut; bereits verdiente Sterne bleiben erhalten.
 - Wenn der Browser das Speichern blockiert, bleibt das Spiel nutzbar und zeigt einen Hinweis. Die Seite dann geöffnet lassen.
+- **Hinweis noch einmal lesen** führt von der Codeeingabe zurück zum letzten Suchhinweis (beim ersten Code zum Starträtsel), ohne Sterne zu verlieren. Das funktioniert auch unter `/ipad`.
 - **Neustart** setzt den Spielstand nach Bestätigung zurück.
 - Für das Laden oder Neuladen der gehosteten Version ist Internet erforderlich. Es gibt keinen Offline-Modus.
 

@@ -29,6 +29,13 @@ test('compatibility runtime completes all missions, rejects wrong answers, and r
   g.click('start'); g.click('first');
   g.answer('wrong'); assert.equal(g.state().phase, 'code');
   for (let stage = 1; stage <= 7; stage++) {
+    const before = g.state();
+    g.click('reread');
+    assert.equal(g.state().stars, before.stars);
+    assert.equal(g.state().stage, stage - 1);
+    assert.ok(g.element('ipad-game').innerHTML.includes(stage === 1 ? MISSIONS[0].intro : MISSIONS[stage - 1].clue));
+    g.click(stage === 1 ? 'first' : 'search');
+    assert.deepEqual(g.state(), before);
     g.answer(MISSIONS[stage - 1].code.toLowerCase());
     assert.equal(g.state().stage, stage);
     assert.equal(g.state().phase, 'challenge');

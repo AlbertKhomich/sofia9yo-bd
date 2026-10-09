@@ -112,6 +112,7 @@ export default function TreasureHunt() {
   else if (phase === 'code') content = <>
     <div className="eyebrow">Geheime Fundstelle {stage} von 7</div><div className="emoji">🔐</div><h2>Geheimcode gefunden?</h2>
     <Stars count={stars} /><p className="lead">Sucht die Codekarte am richtigen Ort und gebt den Code ein.</p>
+    <button className="alt" type="button" onClick={() => go(stage - 1, stage === 1 ? 'challenge' : 'clue')}>↩ Hinweis noch einmal lesen</button>
     <AnswerForm code onSubmit={value => {
       if (!matchesCode(value, MISSIONS[stage - 1].code)) return false;
       go(stage, 'challenge', stage); return true;
