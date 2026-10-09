@@ -96,7 +96,7 @@ export default function TreasureHunt() {
     if (window.confirm('Möchtet ihr wirklich alle Sterne löschen und neu anfangen?')) setState({ ...INITIAL_STATE });
   }
   let content;
-  if (!ready) content = <p className="lead" role="status">Euer Abenteuer wird geladen …</p>;
+  if (!ready) content = <><p className="lead" role="status">Euer Abenteuer wird geladen …</p><p><a href="/ipad">Lädt nicht? Hier auf einem älteren iPad spielen →</a></p></>;
   else if (phase === 'start') content = <>
     <div className="emoji">🗝️🌟</div><div className="eyebrow">Das Geburtstagsabenteuer beginnt</div>
     <h1>Die geheime Geburtstagsschatzsuche</h1><p className="lead">Sieben geheimnisvolle Orte. Acht magische Sterne. Ein versteckter Schatz!</p>

@@ -6,3 +6,4 @@ out/
 !.env.example
 .DS_Store
 *.log
+public/ipad-game.js

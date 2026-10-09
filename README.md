@@ -58,3 +58,7 @@ Einmal alle Missionen auf dem vorgesehenen Tablet durchspielen und anschließend
 - `lib/game.js`: Validierung gespeicherter Spielstände und Codes
 - `app/globals.css`: Tablet-Layout und Farben
 - `app/geheimcodes/`: Druckansicht
+
+## Ältere iPads
+
+Next.js 16 setzt Safari 16.4 oder neuer voraus. Wenn die Startseite beim Laden stehen bleibt, `/ipad` auf derselben Domain öffnen (oder den Link auf dem Ladebildschirm antippen). Diese vollständige Spielversion verwendet ein klassisches ES5-Skript ohne React/Next.js-Browserruntime. Missionen, Codes und Spielstand sind mit der Hauptversion geteilt. Ein tatsächlicher Test auf dem Ziel-iPad bleibt erforderlich; die Kompatibilitätsversion ist kein Offline-Modus.
