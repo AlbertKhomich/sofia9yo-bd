@@ -1,0 +1,21 @@
+.print-sheet { max-width: 900px; }
+.print-sheet h1 { text-align: center; font-size: 32px; }
+.print-actions { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.instructions { font-size: 14px; line-height: 1.6; }
+.card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.code-card { border: 3px dashed #a76bc7; border-radius: 18px; padding: 20px; text-align: center; min-height: 175px; break-inside: avoid; background: white; }
+.where { font-size: 14px; color: #775f87; }
+.secret-code { font-size: 32px; font-weight: 900; letter-spacing: 3px; margin: 12px 0; overflow-wrap: anywhere; }
+.icon { font-size: 30px; }
+@media (max-width: 480px) { .card-grid { grid-template-columns: 1fr; } .print-actions { flex-wrap: wrap; } }
+@page { size: A4; margin: 12mm; }
+@media print {
+  body { background: white; }
+  .print-sheet { max-width: none; padding: 0; margin: 0; }
+  .print-actions { display: none; }
+  .print-sheet h1 { font-size: 24px; margin: 0 0 12px; }
+  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .code-card { min-height: 0; padding: 10px; }
+  .code-card p { margin: 5px 0; }
+  .secret-code { margin: 6px 0; }
+}
