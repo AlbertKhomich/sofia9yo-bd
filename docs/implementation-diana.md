@@ -10,7 +10,7 @@ Implemented a separate Russian-language detective quest based on `docs/scenario-
 
 ## Game flow
 
-Start the investigation, read a puzzle, work out the physical location, find its card, and enter its four-digit code. Only the current card advances the investigation. Wrong codes leave progress intact. Puzzle widgets help the team investigate; physical card codes remain the progression gates.
+Start the investigation, read a puzzle, work out the physical location, find its card, and enter its four-digit code. Only the current card advances the investigation. Wrong codes leave progress intact. Physical card codes gate progression. At task 6, the team must also solve and save the correct musical sequence before its card can unlock task 7.
 
 | Puzzle | Hide card at | Card code | Opens |
 | --- | --- | --- | --- |
@@ -27,13 +27,13 @@ The final lock accepts **41536** (ФА — ДО — СОЛЬ — МИ — ЛЯ).
 
 ## Interactive features
 
-- Tap the first letters of the bathroom acrostic.
-- Rotate a Russian Caesar cipher dial, including Ё; one step backwards gives КОФЕМАШИНА.
-- Choose the truthful witness and the correct route, with retry feedback.
-- Identify the birthday queen and living witness.
-- Play seven numbered piano keys with optional synthesized sound, enter the note sequence, and save the correct musical code to the notebook.
-- Reveal or conceal the reversed final message.
-- Expand hints without leaving the current clue.
+- Task 1 presents only the acrostic riddle; there are no numbered answer-reveal buttons.
+- Task 2 has a separate pair of alphabet controls for every encrypted letter, including Ё. Children decode the word one letter at a time; there is no whole-word decoder.
+- Tasks 3, 4, 5, and 7 present their riddles without multiple-choice buttons.
+- Task 6 has seven numbered piano keys with optional synthesized sound. The correct five-note sequence must be saved to the notebook before the physical card code can advance the game. This requirement survives reloads.
+- Task 8 requires selecting individual characters from the reversed message to assemble the decoded sentence. Each character can be used once; undo and reset allow corrections. There is no one-click reveal.
+- All expandable hints, the final musical reminder, and the explicit stair-location hint have been removed from the game. Organizer placement instructions remain on the print page.
+- Destination-themed icons are omitted from the puzzle headings to avoid extra visual hints.
 - Track eight collected clues in a persistent detective notebook.
 - A 45-minute countdown creates atmosphere without blocking play when time runs out. It uses elapsed wall-clock time, including time away from the page. Completion freezes the elapsed investigation time.
 - Responsive case-file styling, keyboard-accessible controls, numeric code input, focus on each new stage, and reduced-motion support.
@@ -59,11 +59,11 @@ The optional secret-letter bonus was omitted: «ПОБЕДИЛИ» has seven let
 - `components/diana-hunt.js`: interactive game, timer, notebook, storage, and optional audio.
 - `app/diana/page.js`, `app/diana/diana.css`: route, metadata, scoped visual styling.
 - `app/diana/codes/page.js`: printable cards using the existing print stylesheet.
-- `tests/diana.test.js`: progression gates, wrong/out-of-order codes, final lock, save isolation/validation, and cipher correctness.
+- `tests/diana.test.js`: progression gates, wrong/out-of-order codes, final lock, save isolation/validation, the mandatory musical gate (including after restoring a save), and individual cipher-letter wrapping.
 
 Validation completed:
 
-- `npm test`: all **8 tests passed**, including existing Sofia and iPad regression tests.
+- `npm test`: all **9 tests passed**, including existing Sofia and iPad regression tests.
 - `npm run build` with installed **Node 22.23.3**: passed; `/diana` and `/diana/codes` generated successfully.
 - The default shell selected Node 18, so the build was run with the installed Node 22 binary on PATH. No dependency changes were needed.
 - Visual/browser interaction checks could not run because the browser access host was unavailable. Tablet rendering, audio, and physical printed output still need a manual check.
