@@ -17,7 +17,7 @@ Start the investigation, read a puzzle, work out the physical location, find its
 | 1. Дождь без облаков | Bathroom, beside toothbrushes | 2741 | Alchemist puzzle |
 | 2. Загадка алхимика | Beside coffee machine | 6832 | Witness puzzle |
 | 3. Ложный след | Between sofa cushions | 9514 | Route puzzle |
-| 4. Путь наверх | Beside bottom attic stair | 3268 | Royal puzzle |
+| 4. Три маршрута | Beside bottom attic stair | 3268 | Royal puzzle |
 | 5. Королевская тайна | Under Diana’s bed | 8073 | Musical puzzle |
 | 6. Музыкальный код | Beside piano sheet music | 5629 | Plant puzzle |
 | 7. Живой свидетель | Attached behind plant pot | 1496 | Reversed message |
@@ -28,8 +28,8 @@ The final lock accepts **41536** (ФА — ДО — СОЛЬ — МИ — ЛЯ).
 ## Interactive features
 
 - Task 1 presents only the acrostic riddle; there are no numbered answer-reveal buttons.
-- Task 2 has a separate pair of alphabet controls for every encrypted letter, including Ё. Children decode the word one letter at a time; there is no whole-word decoder.
-- Tasks 3, 4, 5, and 7 present their riddles without multiple-choice buttons.
+- Task 2 has a separate pair of alphabet controls for every encrypted letter, including Ё. The controls start seven alphabet positions ahead of the printed cipher (eight steps from each solution letter), so players must set each answer letter individually. The coffee-related introduction is removed; only the cipher and its rule remain. There is no whole-word decoder.
+- Tasks 3, 4, 5, and 7 present their riddles without multiple-choice buttons. Task 4 uses the neutral title «Три маршрута».
 - Task 6 has seven numbered piano keys with optional synthesized sound. The correct five-note sequence must be saved to the notebook before the physical card code can advance the game. This requirement survives reloads.
 - Task 8 requires selecting individual characters from the reversed message to assemble the decoded sentence. Each character can be used once; undo and reset allow corrections. There is no one-click reveal.
 - All expandable hints, the final musical reminder, and the explicit stair-location hint have been removed from the game. Organizer placement instructions remain on the print page.
