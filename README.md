@@ -63,3 +63,9 @@ Einmal alle Missionen auf dem vorgesehenen Tablet durchspielen und anschließend
 ## Ältere iPads
 
 Next.js 16 setzt Safari 16.4 oder neuer voraus. Wenn die Startseite beim Laden stehen bleibt, `/ipad` auf derselben Domain öffnen (oder den Link auf dem Ladebildschirm antippen). Diese vollständige Spielversion verwendet ein klassisches ES5-Skript ohne React/Next.js-Browserruntime. Missionen, Codes und Spielstand sind mit der Hauptversion geteilt. Ein tatsächlicher Test auf dem Ziel-iPad bleibt erforderlich; die Kompatibilitätsversion ist kein Offline-Modus.
+
+## Dianas Detektivspiel
+
+Das separate russischsprachige Geburtstagsspiel **„Дело № 009“** ist unter `/diana` erreichbar. Acht versteckte Codekarten schalten nacheinander die Aufgaben frei; am Ende öffnet der musikalische Code den Geschenkbildschirm. Interaktive Rätsel, Klaviertasten, ein Ermittlungsnotizbuch und ein 45-Minuten-Timer begleiten die Suche. Der Spielstand ist unabhängig von Sofia.
+
+Vorbereitung und druckbare Karten: `/diana/codes`. Ablauf, Verstecke, Codes und Prüfstatus stehen in [docs/implementation-diana.md](docs/implementation-diana.md). Dianas Version benötigt den regulären Next.js-Browser-Support; `/ipad` bleibt Sofias Spiel.

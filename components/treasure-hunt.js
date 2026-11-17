@@ -141,6 +141,6 @@ export default function TreasureHunt() {
     <button className="reset" onClick={reset} disabled={!ready}>↻ Neustart</button></header>
     {storageWarning && <p className="note" role="status">Euer Browser kann den Spielstand gerade nicht speichern. Lasst diese Seite während des Spiels geöffnet.</p>}
     <section className="panel" ref={panel} tabIndex={-1} key={`${stage}-${phase}-${ready}`}>{content}</section>
-    <footer className="foot">Eine magische Schatzsuche für echte Entdeckerinnen 💜</footer>
+    <footer className="foot">Eine magische Schatzsuche für echte Entdeckerinnen 💜<p><a href="/diana" lang="ru">Диана · Дело об исчезнувшем подарке →</a></p></footer>
   </main>;
 }
